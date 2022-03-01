@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_design_master/list_car_screen.dart';
+import 'package:flutter_login_design_master/user_profile_screen.dart';
 import '../login_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -41,14 +43,26 @@ class MainDrawer extends StatelessWidget {
             height: 20,
           ),
           buildListTile(
-            'item 1',
-            Icons.settings,
-            () {},
+            'List Your Car',
+            Icons.car_rental,
+            () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const ListCarScreen()));
+            },
           ),
           buildListTile(
-            'item 2',
-            Icons.location_on,
-            () {},
+            'User Profile',
+            Icons.person_rounded,
+            () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const UserProfileScreen()));
+            },
           ),
           buildListTile(
             'Log Out',

@@ -14,7 +14,7 @@ Widget showCar(Car car, int index, BuildContext context) {
     ),
     // padding: const EdgeInsets.all(10),
     margin: EdgeInsets.only(
-      right: index != null ? 16 : 0,
+      right: index != null ? 12 : 0,
       left: index == 0 ? 6 : 0,
     ),
     width: 220,
@@ -53,25 +53,70 @@ Widget showCar(Car car, int index, BuildContext context) {
               const SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    car.model,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[700]),
-                  ),
-                  Text(
-                    'Rs. ${car.price}',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).primaryColor),
-                  )
-                ],
-              )
+
+              Container(
+                  child: index == -1
+                      ? Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              car.model,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey[700]),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Rs. ${car.price}',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).primaryColor),
+                            )
+                          ],
+                        )
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              car.model,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey[700]),
+                            ),
+                            Text(
+                              'Rs. ${car.price}',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).primaryColor),
+                            )
+                          ],
+                        ))
+
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Text(
+              //       car.model,
+              //       style: TextStyle(
+              //           fontSize: 16,
+              //           fontWeight: FontWeight.w500,
+              //           color: Colors.grey[700]),
+              //     ),
+              //     Text(
+              //       'Rs. ${car.price}',
+              //       style: TextStyle(
+              //           fontSize: 16,
+              //           fontWeight: FontWeight.bold,
+              //           color: Theme.of(context).primaryColor),
+              //     )
+              //   ],
+              // )
             ],
           ),
         )
@@ -79,6 +124,8 @@ Widget showCar(Car car, int index, BuildContext context) {
     ),
   );
 }
+
+
 
 //   @override
 //   Widget build(BuildContext context) {

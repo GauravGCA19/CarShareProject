@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_design_master/available_cars.dart';
 import './widgets/main_drawer.dart';
 import './data.dart';
 import './widgets/car_widget.dart';
@@ -15,16 +16,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<Widget> _pages = [HomeScreen(), RegisterScreen()];
-
-  int _selectedPageIndex = 0;
-
-  void _selectPage(int index) {
-    setState(() {
-      _selectedPageIndex = index;
-    });
-  }
-
   List<Car> cars = getCarList();
 
   @override
@@ -73,54 +64,62 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     //show listings widget
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 10,
-                        right: 16,
-                        left: 16,
-                      ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(15),
-                          ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AvailableCars()));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          top: 10,
+                          right: 16,
+                          left: 16,
                         ),
-                        padding: const EdgeInsets.all(20),
-                        height: 100,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Show All Listings',
-                                  style: TextStyle(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Container(
-                                  width: 220,
-                                  child: const Text(
-                                    'Checkout all the available listings!',
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(15),
+                            ),
+                          ),
+                          padding: const EdgeInsets.all(20),
+                          height: 100,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Show All Listings',
                                     style: TextStyle(
-                                        fontSize: 14, color: Colors.white),
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
                                   ),
-                                )
-                              ],
-                            ),
-                            const Icon(
-                              Icons.keyboard_arrow_right_rounded,
-                              size: 50,
-                              color: Colors.white,
-                            ),
-                          ],
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: 220,
+                                    child: const Text(
+                                      'Checkout all the available listings!',
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              const Icon(
+                                Icons.keyboard_arrow_right_rounded,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -188,20 +187,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   onTap: _selectPage,
-      //   backgroundColor: Theme.of(context).primaryColor,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.star),
-      //       label: 'Home',
-      //     ),
-      //   ],
-      // ),
     );
   }
 
