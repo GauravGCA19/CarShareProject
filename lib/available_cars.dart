@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import './data.dart';
 import './widgets/car_widget.dart';
 
+import './rent_car.dart';
+
 class AvailableCars extends StatefulWidget {
   const AvailableCars({Key? key}) : super(key: key);
 
@@ -45,7 +47,15 @@ class _AvailableCarsState extends State<AvailableCars> {
                 crossAxisSpacing: 0,
                 mainAxisSpacing: 15,
                 children: getCarList().map((item) {
-                  return showCar(item, -1, context);
+                  return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RentCar(car: item)),
+                        );
+                      },
+                      child: showCar(item, -1, context));
                 }).toList(),
               ))
             ],

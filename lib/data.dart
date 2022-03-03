@@ -18,10 +18,10 @@ List<Car> getCarList() {
       2580,
       "Weekly",
       [
-        // "assets/images/land_rover_0.png",
-        // "assets/images/land_rover_1.png",
-        // "assets/images/land_rover_2.png",
-        "assets/images/acura_0.png",
+        "assets/images/land_rover_0.png",
+        "assets/images/land_rover_1.png",
+        "assets/images/land_rover_2.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -30,8 +30,8 @@ List<Car> getCarList() {
       3580,
       "Monthly",
       [
-        // "assets/images/alfa_romeo_c4_0.png",
-        "assets/images/acura_0.png",
+        "assets/images/alfa_romeo_c4_0.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -40,11 +40,11 @@ List<Car> getCarList() {
       1100,
       "Daily",
       [
-        // "assets/images/nissan_gtr_0.png",
-        // "assets/images/nissan_gtr_1.png",
-        // "assets/images/nissan_gtr_2.png",
-        // "assets/images/nissan_gtr_3.png",
-        "assets/images/acura_0.png",
+        "assets/images/nissan_gtr_0.png",
+        "assets/images/nissan_gtr_1.png",
+        "assets/images/nissan_gtr_2.png",
+        "assets/images/nissan_gtr_3.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -54,8 +54,8 @@ List<Car> getCarList() {
       "Monthly",
       [
         "assets/images/acura_0.png",
-        // "assets/images/acura_1.png",
-        // "assets/images/acura_2.png",
+        "assets/images/acura_1.png",
+        "assets/images/acura_2.png",
       ],
     ),
     Car(
@@ -64,10 +64,10 @@ List<Car> getCarList() {
       3400,
       "Weekly",
       [
-        // "assets/images/camaro_0.png",
-        // "assets/images/camaro_1.png",
-        // "assets/images/camaro_2.png",
-        "assets/images/acura_0.png",
+        "assets/images/camaro_0.png",
+        "assets/images/camaro_1.png",
+        "assets/images/camaro_2.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -76,12 +76,12 @@ List<Car> getCarList() {
       4200,
       "Weekly",
       [
-        // "assets/images/ferrari_spider_488_0.png",
-        // "assets/images/ferrari_spider_488_1.png",
-        // "assets/images/ferrari_spider_488_2.png",
-        // "assets/images/ferrari_spider_488_3.png",
-        // "assets/images/ferrari_spider_488_4.png",
-        "assets/images/acura_0.png",
+        "assets/images/ferrari_spider_488_0.png",
+        "assets/images/ferrari_spider_488_1.png",
+        "assets/images/ferrari_spider_488_2.png",
+        "assets/images/ferrari_spider_488_3.png",
+        "assets/images/ferrari_spider_488_4.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -90,9 +90,9 @@ List<Car> getCarList() {
       2300,
       "Weekly",
       [
-        // "assets/images/ford_0.png",
-        // "assets/images/ford_1.png",
-        "assets/images/acura_0.png",
+        "assets/images/ford_0.png",
+        "assets/images/ford_1.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -101,9 +101,9 @@ List<Car> getCarList() {
       1450,
       "Weekly",
       [
-        // "assets/images/fiat_0.png",
-        // "assets/images/fiat_1.png",
-        "assets/images/acura_0.png",
+        "assets/images/fiat_0.png",
+        "assets/images/fiat_1.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -112,8 +112,8 @@ List<Car> getCarList() {
       900,
       "Daily",
       [
-        // "assets/images/honda_0.png",
-        "assets/images/acura_0.png",
+        "assets/images/honda_0.png",
+        // "assets/images/acura_0.png",
       ],
     ),
     Car(
@@ -122,10 +122,10 @@ List<Car> getCarList() {
       1200,
       "Monthly",
       [
-        // "assets/images/citroen_0.png",
-        // "assets/images/citroen_1.png",
-        // "assets/images/citroen_2.png",
-        "assets/images/acura_0.png",
+        "assets/images/citroen_0.png",
+        "assets/images/citroen_1.png",
+        "assets/images/citroen_2.png",
+        // "assets/images/acura_0.png",
       ],
     ),
   ];

@@ -5,6 +5,7 @@ import './data.dart';
 import './widgets/car_widget.dart';
 
 import './register_screen.dart';
+import './rent_car.dart';
 
 import 'package:intl/intl.dart';
 
@@ -193,7 +194,14 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> showDeals() {
     List<Widget> list = [];
     for (var i = 0; i < cars.length; i++) {
-      list.add(showCar(cars[i], i, context));
+      list.add(GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => RentCar(car: cars[i])),
+            );
+          },
+          child: showCar(cars[i], i, context)));
     }
     return list;
   }
