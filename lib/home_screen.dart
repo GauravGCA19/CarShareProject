@@ -3,8 +3,8 @@ import 'package:flutter_login_design_master/available_cars.dart';
 import './widgets/main_drawer.dart';
 import './data.dart';
 import './widgets/car_widget.dart';
+import './widgets/brand_widget.dart';
 
-import './register_screen.dart';
 import './rent_car.dart';
 
 import 'package:intl/intl.dart';
@@ -18,6 +18,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Car> cars = getCarList();
+  List<Brand> allBrands = getBrandList();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             padding: const EdgeInsets.all(20),
             child: const Text(
-              'Recent Listings',
+              'Featured Listings',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
@@ -181,6 +182,37 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
+
+                    // SizedBox(
+                    //   height: 15,
+                    // ),
+
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'Top Brands',
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+
+                    // SizedBox(
+                    //   height: 15,
+                    // ),
+
+                    //container for brands
+                    Container(
+                      height: 100,
+                      margin: EdgeInsets.only(bottom: 16),
+                      child: ListView(
+                        physics: BouncingScrollPhysics(),
+                        scrollDirection: Axis.horizontal,
+                        children: showBrands(),
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -202,6 +234,14 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
           child: showCar(cars[i], i, context)));
+    }
+    return list;
+  }
+
+  List<Widget> showBrands() {
+    List<Widget> list = [];
+    for (var i = 0; i < allBrands.length; i++) {
+      list.add(showBrand(allBrands[i], i));
     }
     return list;
   }

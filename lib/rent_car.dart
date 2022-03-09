@@ -218,7 +218,7 @@ class _RentCarState extends State<RentCar> {
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)))),
-            )
+            ),
           ],
         ),
       ),
