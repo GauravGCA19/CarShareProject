@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_design_master/main.dart';
 import './data.dart';
+import './payment_screen.dart';
+import 'package:khalti_flutter/khalti_flutter.dart';
 
 import 'package:intl/intl.dart';
 

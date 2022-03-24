@@ -101,7 +101,7 @@ class _DateScreenState extends State<DateScreen> {
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
-                    )
+                    ),
                   ],
                 ),
 
