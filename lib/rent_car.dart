@@ -131,18 +131,9 @@ class _RentCarState extends State<RentCar> {
                       style:
                           TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'From: ${bookingTime()}',
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        Text(
-                          'To: ${bookingTime()}',
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
+                    Text(
+                      'From: ${bookingTime()}',
+                      style: TextStyle(fontSize: 20),
                     ),
                   ],
                 ),
