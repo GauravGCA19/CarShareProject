@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_design_master/tabs_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import './register_screen.dart';
-import './payment_screen.dart';
 import './home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -101,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                   child: MaterialButton(
                     onPressed: () {
                       // Fluttertoast.showToast(
-                      //     msg: "Milena vai milena",
+                      //     msg: "wrong credentials",
                       //     toastLength: Toast.LENGTH_SHORT,
                       //     gravity: ToastGravity.CENTER,
                       //     timeInSecForIosWeb: 1,

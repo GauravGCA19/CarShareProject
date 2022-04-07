@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
 import './widgets/image_input.dart';
 
@@ -26,17 +27,6 @@ class _ListCarScreenState extends State<ListCarScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Text(
-                  //   'List your own car',
-                  //   style: TextStyle(
-                  //     fontSize: 24,
-                  //     fontWeight: FontWeight.bold,
-                  //   ),
-                  // ),
-                  // const SizedBox(
-                  //   height: 30,
-                  // ),
-
                   //brand
                   Text(
                     'Brand of your car:',
@@ -217,44 +207,90 @@ class _ListCarScreenState extends State<ListCarScreen> {
 
                   ImageInput(),
 
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     ElevatedButton(
-                  //       onPressed: null,
-                  //       child: const Text(
-                  //         'Upload',
-                  //         style: TextStyle(color: Colors.white),
-                  //       ),
-                  //       style: ButtonStyle(
-                  //           backgroundColor: MaterialStateProperty.all(
-                  //               Theme.of(context).primaryColor),
-                  //           padding: MaterialStateProperty.all(
-                  //             const EdgeInsets.symmetric(
-                  //                 horizontal: 20, vertical: 10),
-                  //           ),
-                  //           textStyle: MaterialStateProperty.all(
-                  //             const TextStyle(
-                  //                 fontSize: 22, fontWeight: FontWeight.bold),
-                  //           ),
-                  //           shape: MaterialStateProperty.all<
-                  //                   RoundedRectangleBorder>(
-                  //               RoundedRectangleBorder(
-                  //                   borderRadius: BorderRadius.circular(5)))),
-                  //     ),
-                  //     Container(
-                  //       // constraints: BoxConstraints.expand(),
-                  //       height: 80,
-                  //       width: 80,
-                  //       color: Colors.grey,
-                  //     )
-                  //   ],
-                  // ),
-
                   const SizedBox(
                     height: 25,
                   ),
 
+                  //Map user location
+                  Text(
+                    'Set location of your car:',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.grey),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        TextFormField(
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+                            labelText: 'City',
+                            border: const OutlineInputBorder(),
+                            prefixIcon: const Icon(
+                              Icons.location_city,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextFormField(
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+                            labelText: 'Street Name',
+                            border: const OutlineInputBorder(),
+                            prefixIcon: const Icon(
+                              Icons.add_road,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                            labelText: 'Street Number',
+                            border: const OutlineInputBorder(),
+                            prefixIcon: const Icon(
+                              Icons.edit_road,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 25,
+                  ),
                   //done button
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -264,9 +300,6 @@ class _ListCarScreenState extends State<ListCarScreen> {
                         width: 170,
                         child: ElevatedButton(
                           onPressed: null,
-                          // selectedDate == DateTime(2030)
-                          //     ? showToastMsg
-                          //     : showOtherMsg,
                           child: const Text(
                             'Done',
                             style: TextStyle(color: Colors.white),
