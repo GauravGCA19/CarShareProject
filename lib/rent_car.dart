@@ -127,7 +127,7 @@ class _RentCarState extends State<RentCar> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Rent Duration',
+                      'Rent Date',
                       style:
                           TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
                     ),
